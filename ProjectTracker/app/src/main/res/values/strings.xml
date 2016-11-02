@@ -1,11 +1,7 @@
 <resources>
     <string name="app_name">ProjectTracker</string>
 
-
-
-
-
-
-
+    <string name="main_activity_header_current_projects">Current Projects</string>
+    <string name="to_calendar_button">Calendar</string>
 
 </resources>

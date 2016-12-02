@@ -33,7 +33,7 @@ public class ProjectList {
 
         mContext = context;
 
-            // Load in some projects for testing purposes:
+        // Load in some projects for testing purposes:
         for (int i = 0; i < 10; i++) {
             Project project = new Project();
             project.setProjectTitle("Project #" + i);
@@ -41,8 +41,7 @@ public class ProjectList {
             String category;
             if (i % 2 == 0) {
                 category = "School";
-            }
-            else {
+            } else {
                 category = "Work";
             }
 
@@ -56,5 +55,7 @@ public class ProjectList {
         }
     }
 
-    public List<Project> getProjects() { return mProjectList; }
+    public List<Project> getProjects() {
+        return mProjectList;
+    }
 }

@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class Project {
 
-        // Project variable declarations:
+    // Project variable declarations:
     private String mProjectTitle;
     private String mProjectCategory;
     private Date mProjectStartDate;
@@ -15,7 +15,7 @@ public class Project {
     private String mProjectDescription;
     private String mProjectNotes;
 
-        // Project properties / getters and setters:
+    // Project properties / getters and setters:
     public String getProjectTitle() {
         return mProjectTitle;
     }
@@ -64,14 +64,14 @@ public class Project {
         mProjectNotes = projectNotes;
     }
 
-        // Project constructor:
+    // Project constructor:
     public Project() {
 
     }
 
-        // Public method to add a new Project:
-    public void AddProject (String title, String category, Date startDate, Date endDate,
-                     String description, String notes) {
+    // Public method to add a new Project:
+    public void AddProject(String title, String category, Date startDate, Date endDate,
+                           String description, String notes) {
         mProjectTitle = title;
         mProjectCategory = category;
         mProjectStartDate = startDate;

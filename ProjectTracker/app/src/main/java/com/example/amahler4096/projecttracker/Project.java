@@ -1,13 +1,15 @@
 package com.example.amahler4096.projecttracker;
 
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Created by amahler4096 on 10/24/2016.  Holds info for each individual project.
  */
 public class Project {
 
-        // Project variable declarations:
+    // Project variable declarations:
+    private UUID mProjectIDTag;
     private String mProjectTitle;
     private String mProjectCategory;
     private Date mProjectStartDate;
@@ -15,7 +17,17 @@ public class Project {
     private String mProjectDescription;
     private String mProjectNotes;
 
-        // Project properties / getters and setters:
+    // Project properties / getters and setters:
+
+
+    public UUID getmProjectIDTag() {
+        return mProjectIDTag;
+    }
+
+    public void setmProjectIDTag(UUID mProjectIDTag) {
+        this.mProjectIDTag = mProjectIDTag;
+    }
+
     public String getProjectTitle() {
         return mProjectTitle;
     }
@@ -64,14 +76,15 @@ public class Project {
         mProjectNotes = projectNotes;
     }
 
-        // Project constructor:
+    // Project constructor:
     public Project() {
 
     }
 
-        // Public method to add a new Project:
-    public void AddProject (String title, String category, Date startDate, Date endDate,
-                     String description, String notes) {
+    // Public method to add a new Project:
+    public void AddProject(String title, String category, Date startDate, Date endDate,
+                           String description, String notes) {
+        mProjectIDTag = UUID.randomUUID();
         mProjectTitle = title;
         mProjectCategory = category;
         mProjectStartDate = startDate;

@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.UUID;
 
 /**
  * Created by amahler4096 on 10/24/2016.
@@ -57,5 +58,14 @@ public class ProjectList {
 
     public List<Project> getProjects() {
         return mProjectList;
+    }
+
+    public Project getProject(UUID id) {
+        for(Project project : mProjectList) {
+            if(project.getmProjectIDTag().equals(id)) {
+                return project;
+            }
+        }
+        return null;
     }
 }

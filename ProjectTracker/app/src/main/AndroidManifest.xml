@@ -19,8 +19,6 @@
         </activity>
         <activity android:name=".CalendarActivity">
         </activity>
-        <activity android:name=".EditProjectActivity">
-        </activity>
     </application>
 
 </manifest>

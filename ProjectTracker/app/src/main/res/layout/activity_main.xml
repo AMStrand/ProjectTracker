@@ -28,17 +28,6 @@
             android:padding="8dp"
             android:scrollbarStyle="insideInset"/>
 
-            <Button
-                android:id="@+id/to_calendar_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/to_calendar_button"
-                android:layout_weight="1"
-                android:textSize="20dp"
-                android:layout_gravity="center"
-                android:padding="20dp"/>
-
-
     </LinearLayout>
 
 </LinearLayout>

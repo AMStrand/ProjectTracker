@@ -24,9 +24,6 @@ import java.util.List;
  */
 public class ProjectListFragment extends Fragment {
 
-        // Create variables for the button:
-    private Button mViewCalendarButton;
-
         // Recycler view related items:
     private RecyclerView mProjectListRecycler;
     private ProjectAdapter mProjectAdapter;
@@ -48,15 +45,6 @@ public class ProjectListFragment extends Fragment {
         mProjectListRecycler = (RecyclerView) view.findViewById(R.id.current_project_list);
             // Set the layout manager:
         mProjectListRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-            // Wire up the calendar button:
-        mViewCalendarButton = (Button) view.findViewById(R.id.to_calendar_button);
-        mViewCalendarButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Intent intent = CalendarActivity.newCalendarIntent(getActivity());
-                //startActivity(intent);
-            }
-        });
             // Update the UI:
         updateUI();
             // Return the view:

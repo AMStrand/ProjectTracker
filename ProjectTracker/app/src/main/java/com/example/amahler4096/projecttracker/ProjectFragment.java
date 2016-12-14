@@ -24,10 +24,12 @@ import java.util.UUID;
  */
 public class ProjectFragment extends Fragment {
 
+    // Create variable for the calendar button:
+    private Button mViewCalendarButton;
+
     private static final String ARG_PROJECT_ID = "projectID";
 
     private Project mProject;
-    private Button mEditProjectButton;
     private EditText mNameEditText;
     private EditText mCategoryEditText;
     private EditText mStartDateEditText;
@@ -61,14 +63,6 @@ public class ProjectFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.activity_project, container, false);
-
-        mEditProjectButton.setOnClickListener(new View.OnClickListener() {
-          @Override
-            public void onClick(View v) {
-              Intent intent = EditProjectActivity.EditIntent(getActivity(),mProject.getmProjectIDTag());
-              startActivity(intent);
-          }
-        });
 
         mNameEditText = (EditText)view.findViewById(R.id.name_edit_text);
         mNameEditText.setText(mProject.getProjectTitle());
@@ -181,6 +175,16 @@ public class ProjectFragment extends Fragment {
             @Override
             public void afterTextChanged(Editable s) {
 
+            }
+        });
+
+        // Wire up the calendar button:
+        mViewCalendarButton = (Button) view.findViewById(R.id.to_calendar_button);
+        mViewCalendarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent intent = CalendarActivity.newCalendarIntent(getActivity());
+                //startActivity(intent);
             }
         });
 

@@ -1,5 +1,6 @@
 package com.example.amahler4096.projecttracker;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
@@ -10,12 +11,12 @@ public class Project {
 
     // Project variable declarations:
     private UUID mProjectIDTag;
-    private String mProjectTitle;
-    private String mProjectCategory;
-    private Date mProjectStartDate;
-    private Date mProjectEndDate;
-    private String mProjectDescription;
-    private String mProjectNotes;
+    private String mProjectTitle = "";
+    private String mProjectCategory = "";
+    private Date mProjectStartDate = Calendar.getInstance().getTime();
+    private Date mProjectEndDate = Calendar.getInstance().getTime();
+    private String mProjectDescription = "";
+    private String mProjectNotes = "";
 
     // Project properties / getters and setters:
 
@@ -78,7 +79,7 @@ public class Project {
 
     // Project constructor:
     public Project() {
-
+        mProjectIDTag = UUID.randomUUID();
     }
 
     // Public method to add a new Project:

@@ -12,19 +12,22 @@ import android.support.v7.app.AppCompatActivity;
 
 public abstract class SingleFragmentActivity extends AppCompatActivity
 {
+        // Variable to hold a fragment:
     protected abstract Fragment createFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
-
+            // Get the fragment manager:
         FragmentManager fm = getSupportFragmentManager();
-
+            // Connect the fragment to the fragment view:
         Fragment fragment = fm.findFragmentById(R.id.fragment_container);
-
+            // If the fragment is null, create it:
         if (fragment == null) {
+                // Create the fragment:
             fragment = createFragment();
+                // Bind it to the fragment view:
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
 

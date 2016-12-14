@@ -68,4 +68,8 @@ public class ProjectList {
         }
         return null;
     }
+
+    public void addProject(Project project) {
+        sProjectList.addProject(project);
+    }
 }

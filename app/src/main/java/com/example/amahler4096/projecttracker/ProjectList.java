@@ -70,6 +70,6 @@ public class ProjectList {
     }
 
     public void addProject(Project project) {
-        sProjectList.addProject(project);
+        mProjectList.add(project);
     }
 }

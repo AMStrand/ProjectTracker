@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".ProjectActivity">
         </activity>
+        <activity android:name=".ProjectPagerActivity">
+        </activity>
         <activity android:name=".CalendarActivity">
         </activity>
     </application>

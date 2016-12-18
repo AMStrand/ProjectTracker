@@ -94,7 +94,7 @@ public class ProjectListFragment extends Fragment {
 
             // On clicking one, start the ProjectActivity using the id of the chosen project:
         public void onClick (View v) {
-            Intent intent = ProjectActivity.newIntent(getActivity(), mProject.getmProjectIDTag());
+            Intent intent = ProjectPagerActivity.newIntent(getActivity(), mProject.getmProjectIDTag());
             startActivity(intent);
         }
 

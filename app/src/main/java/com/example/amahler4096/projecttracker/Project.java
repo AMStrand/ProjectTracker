@@ -80,12 +80,23 @@ public class Project {
     // Project constructor:
     public Project() {
         mProjectIDTag = UUID.randomUUID();
+        mProjectTitle = "New Project";
+        mProjectCategory= "Please Enter a Category";
+        mProjectStartDate =  new Date();
+        mProjectEndDate = new Date();
+        mProjectDescription = "Please Enter a Description";
+        mProjectNotes= "Add Notes here";
+
+    }
+
+    public Project (UUID id) {
+        mProjectIDTag = id;
     }
 
     // Public method to add a new Project:
-    public void AddProject(String title, String category, Date startDate, Date endDate,
+    public void AddProject(UUID uuid, String title, String category, Date startDate, Date endDate,
                            String description, String notes) {
-        mProjectIDTag = UUID.randomUUID();
+        mProjectIDTag = uuid;
         mProjectTitle = title;
         mProjectCategory = category;
         mProjectStartDate = startDate;

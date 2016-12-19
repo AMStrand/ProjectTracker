@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import java.text.ParseException;
 import java.util.Calendar;
 import java.util.List;
 
@@ -46,19 +47,14 @@ public class ProjectListFragment extends Fragment {
             // Set the layout manager:
         mProjectListRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
             // Update the UI:
-        updateUI();
-            // Return the view:
+
+            //updateUI();
+
+        // Return the view:
         return view;
     }
 
 
-    //Updates the UI on resume.
-    @Override
-    public void onResume(){
-        super.onResume();
-            // Update the UI:
-        updateUI();
-    }
 
     //Holds a single project and it's information for display. Since I don't know what we want to display in the main list of projects, I haven't
     //placed any text views or the like yet. -Jordan
@@ -132,6 +128,10 @@ public class ProjectListFragment extends Fragment {
         public int getItemCount() {
             return mProjects.size();
         }
+
+        public void setProjects(List<Project> projects) {
+            mProjects = projects;
+        }
     }
 
     @Override
@@ -144,8 +144,10 @@ public class ProjectListFragment extends Fragment {
                     // Create a new project:
                 Project project = new Project();
                     // Add the project to the project list:
-                ProjectList.get(getActivity()).addProject(project);
-                    // Get the intent from the project pager activity:
+
+                    ProjectList.get(getActivity()).addProject(project);
+
+                // Get the intent from the project pager activity:
                 Intent intent = ProjectPagerActivity.newIntent(getActivity(), project.getmProjectIDTag());
                     // Start the activity:
                 startActivity(intent);
@@ -154,6 +156,13 @@ public class ProjectListFragment extends Fragment {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        updateUI();
     }
 
     @Override
@@ -179,6 +188,8 @@ public class ProjectListFragment extends Fragment {
         }
         else
         {
+            mProjectAdapter.setProjects(projects);
+
                 // Otherwise, notify that the data set has changed:
             mProjectAdapter.notifyDataSetChanged();
         }

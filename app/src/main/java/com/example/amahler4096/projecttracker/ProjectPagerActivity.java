@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import java.text.ParseException;
 import java.util.List;
 import java.util.UUID;
 
@@ -39,8 +40,10 @@ public class ProjectPagerActivity extends AppCompatActivity {
             // Wire up the view pager:
         mViewPager = (ViewPager) findViewById(R.id.activity_project_pager_view_pager);
             // Get a local instance of the project list:
-        mProjects = ProjectList.get(this).getProjects();
-            // Get a local instance of the fragment manager:
+
+            mProjects = ProjectList.get(this).getProjects();
+
+        // Get a local instance of the fragment manager:
         FragmentManager fragmentManager = getSupportFragmentManager();
             // Set the adapter:
         mViewPager.setAdapter(new FragmentStatePagerAdapter(fragmentManager) {

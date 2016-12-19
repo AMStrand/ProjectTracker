@@ -17,4 +17,7 @@
     <string name="description_textview">Description:</string>
     <string name="notes_textview">Notes:</string>
 
+    <string name="date_select">Select Date</string>
+
+
 </resources>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ProjectTracker</string>
+
+    <string name="main_activity_header_current_projects">Current Projects</string>
+    <string name="to_calendar_button">Calendar</string>
+    <string name="new_project_button">New Project</string>
+
+    <string name="project_complete_check_box">Complete?</string>
+
+    <string name="new_project">New Project</string>
+
+    <string name="name_textview">Project Name:</string>
+    <string name="category_textview">Category:</string>
+    <string name="id_textview">Id:</string>
+    <string name="start_date_textview">Start Date:</string>
+    <string name="end_date_textview">End Date:</string>
+    <string name="description_textview">Description:</string>
+    <string name="notes_textview">Notes:</string>
+
+    <string name="date_select">Select Date</string>
+
+
+</resources>
